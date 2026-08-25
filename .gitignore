@@ -1,0 +1,5 @@
+third_party/HUGSIM/results/
+third_party/HUGSIM/output/
+third_party/HUGSIM/data/*/processed/
+*.pyc
+__pycache__/
