@@ -1,0 +1,10 @@
+min_steer: 15
+max_steer: 15
+min_acc: -2.0
+max_acc: 2.0
+fric: 0.2
+Lr: 1.35
+Lf: 1.35
+max_speed: 0.5
+# The paper evaluates the E2E policy at 2 Hz.
+dt: 0.5

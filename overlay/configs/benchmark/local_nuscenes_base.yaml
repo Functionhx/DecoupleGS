@@ -1,0 +1,9 @@
+realcar_path: data/decouplegs/3DRealCar
+model_base: data/decouplegs/scenes/nuscenes
+uniad_path: tools/run_uniad_sim.sh
+vad_path: tools/run_vad_sim.sh
+ltf_path: external/NAVSIM/ltf_e2e.sh
+output_dir: results/decouplegs/closed-loop/nusc_
+HD_map:
+  path: data/decouplegs/nuscenes/Trainval
+  version: nusc_trainval

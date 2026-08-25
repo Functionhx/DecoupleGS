@@ -1,0 +1,34 @@
+schema_version: 1
+hypothesis: H-DATA-01
+note: >-
+  The paper does not publish its 20 3DRealCar IDs. This frozen replacement
+  cohort uses the released HUGSIM assets and stratifies morphology from w/l/h;
+  category labels are engineering strata, not dataset annotations.
+assets:
+  # Sedan/compact stratum (10)
+  - "2024_07_05_10_58_02"
+  - "2024_07_05_11_02_48"
+  - "2024_07_05_15_57_10"
+  - "2024_07_05_16_10_02"
+  - "2024_07_02_14_20_29"
+  - "2024_06_04_13_44_39"
+  - "2024_06_04_15_34_51"
+  - "2024_07_01_14_01_13"
+  - "2024_07_01_15_27_18"
+  - "2024_04_22_10_35_34"
+  # SUV/tall-passenger stratum (6)
+  - "2024_07_01_16_10_59"
+  - "2024_07_05_10_40_08"
+  - "2024_07_07_06_00_52"
+  - "2024_07_02_13_45_45"
+  - "2024_07_02_15_18_44"
+  - "2024_07_05_16_48_24"
+  # Commercial/large-footprint stratum (4)
+  - "2024_07_01_14_11_39"
+  - "2024_07_09_04_28_04"
+  - "2024_07_05_10_17_38"
+  - "2024_07_01_17_29_14"
+strata:
+  sedan_or_compact: 10
+  suv_or_tall_passenger: 6
+  commercial_or_large_footprint: 4

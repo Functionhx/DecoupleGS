@@ -1,0 +1,393 @@
+mode: extreme_47
+plan_list:
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 2.753344985688776
+  - '2024_07_05_10_17_38'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 10.165027876391973
+    lane_offsets: &id001
+    - -3.5
+    - 0.0
+    - 3.5
+    allow_lane_changes: true
+    idm: &id002
+      desired_speed: 13.0
+      minimum_gap: 1.25
+      time_headway: 0.7
+      max_acceleration: 3.0
+      comfortable_deceleration: 6.0
+    mobil: &id003
+      acceleration_threshold: -0.15
+      politeness: 0.0
+      safe_deceleration: 6.0
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 3.55884938885806
+  - '2024_04_22_10_35_34'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 10.397360737106919
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 9.641699561250114
+  - '2024_07_05_10_58_02'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 9.660694265509118
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 5.900950733076881
+  - '2024_07_05_10_40_08'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 16.775048643976252
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 3.3838057904769783
+  - '2024_07_05_15_57_10'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 15.209190291155883
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 4.894771658355271
+  - '2024_07_02_13_45_45'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 22.672965355037952
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 9.450117242894677
+  - '2024_07_02_14_20_29'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 20.846720736083242
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 3.4058263771565658
+  - '2024_07_05_16_48_24'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 16.706979884803673
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+    hard_brake_start_seconds: 8.831443886273874
+    hard_brake_duration_seconds: 1.9861311611102512
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 1.8158002914133633
+  - '2024_06_04_15_34_51'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 26.201247528324856
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 4.501369490083961
+  - '2024_07_09_04_28_04'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 22.714223979892463
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 3.4971497262749818
+  - '2024_07_01_15_27_18'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 29.02526468920923
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 4.770186462187049
+  - '2024_07_01_17_29_14'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 35.2856459419293
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 4.129073336994669
+  - '2024_07_01_16_10_59'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 29.159342693259074
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 1.12342529596857
+  - '2024_07_05_11_02_48'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 32.10408669388001
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 2.638420601650199
+  - '2024_07_07_06_00_52'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 37.45801772492917
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 2.2224387683367155
+  - '2024_07_05_16_10_02'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 35.377637914507126
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 8.622613719457098
+  - '2024_07_02_15_18_44'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 43.07059194662363
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 5.4135965525459
+  - '2024_06_04_13_44_39'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 41.73003034495226
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 9.87079725337276
+  - '2024_07_01_14_11_39'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 41.49674289804837
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 10.62835991580601
+  - '2024_07_01_14_01_13'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 48.73598775063611
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 1.5269805866984212
+  - '2024_07_05_10_17_38'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 47.60360132502987
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 8.56544018449025
+  - '2024_04_22_10_35_34'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 47.4715789281017
+    lane_offsets: *id001
+    allow_lane_changes: true
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 2.4
+    lane_change_cooldown: 1.0
+    hard_brake_deceleration: 7.0
+load_HD_map: false
+start_euler:
+- 0.0
+- 0.0
+- 0.0
+start_ab:
+- 0.0
+- 0.0
+start_velo: 1.0
+start_steer: 0.0
+scene_name: scene-0062
+iteration: 30000
+decouplegs_stress:
+  schema_version: 1
+  hypothesis: H-SCENARIO-01 deterministic paper-scale scenario synthesis
+  difficulty: extreme
+  seed: 261101808
+  dynamic_agents: 22
+  traffic_radius_m: 50.0
+  lighting:
+    kind: adversarial_low_light_glare
+    exposure: 0.32
+    gamma: 1.35
+    glare_strength: 0.35
+  behavior: IDM+MOBIL with H-BEHAVIOR-01/02 execution details
+  asset_unique_pool: 20

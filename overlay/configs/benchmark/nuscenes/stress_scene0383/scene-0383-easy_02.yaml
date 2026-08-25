@@ -1,0 +1,53 @@
+mode: easy_02
+plan_list:
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 5.049581314589833
+  - '2024_07_02_15_18_44'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 29.861845613021444
+    lane_offsets:
+    - -3.5
+    - 0.0
+    - 3.5
+    allow_lane_changes: false
+    idm:
+      desired_speed: 8.0
+      minimum_gap: 5.0
+      time_headway: 2.5
+      max_acceleration: 1.2
+      comfortable_deceleration: 3.0
+    mobil:
+      acceleration_threshold: 999.0
+      politeness: 0.5
+    lane_change_duration: 3.0
+    lane_change_cooldown: 2.0
+    hard_brake_deceleration: 6.0
+load_HD_map: false
+start_euler:
+- 0.0
+- 0.0
+- 0.0
+start_ab:
+- 0.0
+- 0.0
+start_velo: 1.0
+start_steer: 0.0
+scene_name: scene-0383
+iteration: 30000
+decouplegs_stress:
+  schema_version: 1
+  hypothesis: H-SCENARIO-01 deterministic paper-scale scenario synthesis
+  difficulty: easy
+  seed: 260801763
+  dynamic_agents: 1
+  traffic_radius_m: 50.0
+  lighting:
+    kind: clear_day
+    exposure: 1.0
+    gamma: 1.0
+  behavior: IDM+MOBIL with H-BEHAVIOR-01/02 execution details
+  asset_unique_pool: 20

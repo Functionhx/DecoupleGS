@@ -1,5 +1,5 @@
-third_party/HUGSIM/results/
-third_party/HUGSIM/output/
-third_party/HUGSIM/data/*/processed/
+3rdparty/HUGSIM/results/
+3rdparty/HUGSIM/output/
+3rdparty/HUGSIM/data/*/processed/
 *.pyc
 __pycache__/

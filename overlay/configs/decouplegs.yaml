@@ -1,0 +1,95 @@
+# Online DecoupleGS reimplementation settings. Merge this file into the HUGSIM
+# configuration (closed_loop.py --decouple_config configs/decouplegs.yaml).
+decouplegs:
+  enabled: true
+  max_episode_seconds: 20.0
+  # H-NAV-01: reproduce HUGSIM's released current-route command contract.
+  # A positive arc-length lookahead remains available as an explicit R&D
+  # ablation, but must not be enabled in the strict paper-protocol baseline:
+  # it can skip a short initial turn segment before the first 2 Hz step.
+  navigation_command_lookahead_m: 0.0
+
+  # Reproduction R&D H-PLAN-01. This is deliberately disabled in the strict
+  # paper baseline and enabled only in separately labelled assisted runs.
+  trajectory_stabilizer:
+    enabled: false
+    cruise_speed_floor_mps: 6.0
+    cruise_speed_cap_mps: 8.0
+    learned_lateral_weight: 0.25
+    maximum_lateral_residual_m: 1.0
+    stable_current_lateral_threshold_m: 0.75
+    stable_input_lateral_threshold_m: 3.5
+    stable_learned_lateral_weight: 1.0
+    stable_maximum_lateral_residual_m: 3.0
+    # Include one adjacent lane so an aggressive cut-in is limited before its
+    # MOBIL target-lane state becomes active.
+    lead_corridor_half_width_m: 4.0
+    lead_lookahead_m: 35.0
+    lead_minimum_gap_m: 5.0
+    lead_time_headway_s: 2.0
+
+  # Eq. (3) and unified runtime options.
+  rotate_sh: true
+  frustum_culling: true
+  # E2E planners consume RGB; collision/route metrics use simulator geometry,
+  # so auxiliary semantic/depth rasterization is disabled in the hot loop.
+  rgb_only_sensor: true
+  batch_camera_sensor: true
+  compact_asset_batch_size: 8
+  compact_radius_clip: 0.0
+  # Cache exact static projection/tile/radix data for an unchanged camera rig.
+  # One scene entry is already O(100 MiB), so the LRU deliberately stays at 1.
+  static_background_cache: true
+  static_background_cache_entries: 1
+  # A changing ego camera is never cached merely to be evicted next frame.
+  static_background_cache_min_observations: 2
+  # Incremental insertion wins while dynamic screen-space primitives remain
+  # close to the cached background population; denser frames use full radix.
+  incremental_merge_max_dynamic_ratio: 1.25
+  # Optional distance LOD used only after a quality sweep validates the scene.
+  compact_lod_radius_clip: null
+  compact_lod_start_distance: 20.0
+
+  # Sec. 3.3 / Supplementary A.2.
+  heading_weight: 2.5
+  map_resolution: 0.1
+  opacity_grounding: true
+  # R&D H-GEO-02: restrict opacity columns to semantic road/ground Gaussians.
+  semantic_grounding: true
+  ground_opacity_threshold: 0.0
+  column_radius: 0.35
+  max_vertical_distance: null
+  # HUGSIM world and released 3DRealCar assets use physical up = -Y.
+  world_up_sign: -1
+  asset_up_sign: -1
+
+  # Sec. 3.4 / Supplementary B.2-B.3.
+  relighting: true
+  # Use the paper-exact OLS sidecar when present. When it is absent, transfer
+  # local exposure/tint so released HUGSIM assets still show relighting.
+  adaptive_relighting: true
+  adaptive_strength: 0.65
+  adaptive_reference_intensity: 0.5
+  adaptive_min_gain: 0.25
+  adaptive_max_gain: 2.0
+  probe_sigma: 3.0
+  probe_radius: 9.0
+  # Optional training-view E[alpha contribution] tensor for Eq. (7), resolved
+  # relative to model_path. Opacity is the documented fallback when absent.
+  background_visibility_path: null
+  contact_shadows: true
+  shadow_strength: 0.55
+  shadow_exponent: 4.0
+  shadow_decay: 2.0
+  shadow_ground_band: 0.25
+  # R&D hypothesis H-RUNTIME-03: values below this bound are treated as zero
+  # so contact shadows query a finite spatial neighbourhood. Set null for the
+  # exact dense equation; 1e-5 bounds per-agent attenuation error to 5.5e-6.
+  shadow_mask_epsilon: 1.0e-5
+
+  # Optional files placed beside each 3DRealCar gs.pth. Raw HUGSIM assets are
+  # used when the compact file is absent.
+  # Selected by proxy-view ablation H-COMP-01: 34.9% primitives with only
+  # -0.25 dB vehicle PSNR versus the literal-score 98.2% asset.
+  compact_filename: decouplegs-visgate.dgs
+  calibration_filename: relighting.pt

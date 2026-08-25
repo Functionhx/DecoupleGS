@@ -1,0 +1,35 @@
+*.pyc
+.vscode
+.idea
+.DS_Store
+.nfs*
+__pycache__
+*.pth
+output
+build
+shell
+private
+apex
+# pixi environments
+.pixi
+*.egg-info
+
+# Local Python/tool caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated experiment outputs and heavyweight scene/asset products
+/results/
+/artifacts/*
+!/artifacts/decouplegs-effects-demo/
+!/artifacts/decouplegs-effects-demo/**
+*.dgs
+*.ply
+*.pt
+*.pkl
+
+# Local environment overrides
+.env
+.env.*

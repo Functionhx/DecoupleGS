@@ -1,0 +1,167 @@
+schema_version: 1
+paper:
+  title: "DecoupleGS: Interactive 3D Gaussian Splatting for End-to-End Autonomous Driving Testing"
+  arxiv: "2608.01761v1"
+  published: "2026-08-03"
+  source: "https://arxiv.org/abs/2608.01761"
+
+reference_hardware:
+  gpu: "NVIDIA RTX 4090"
+  gpu_memory_gib: 24
+  cpu: "Intel Core i9-13900K"
+  custom_cuda: true
+
+protocol:
+  backgrounds:
+    nuscenes_dynamic_clips: 15
+    pandaset_sequences: 10
+    training_iterations: 30000
+    training_minutes_per_scene: 45
+  assets:
+    source: "3DRealCar"
+    total: 20
+    sedan: 10
+    suv: 6
+    commercial: 4
+    training_iterations: 20000
+    training_minutes_per_asset: 15
+    densification_gradient_threshold: 0.0004
+    mask_dilation_pixels: 5
+  compression:
+    prune_threshold: 0.005
+    importance_weights:
+      visibility: 0.5
+      color: 0.3
+      entropy: 0.2
+    shape_codebook_entries: 512
+    color_codebook_entries: 1024
+    codebook_initializer: "k-means++"
+    ema_iterations: 5000
+    ema_momentum: 0.99
+  registration:
+    heading_weight: 2.5
+    map_resample_m: 0.1
+  relighting:
+    descriptor_dimensions: 27
+    sh_bands: 3
+    calibration: "offline OLS over pre-captured HDRI probes"
+  closed_loop:
+    episode_seconds: 20
+    control_frequency_hz: 2
+    episodes_per_difficulty_and_policy: 50
+
+# Main-paper Table 1. Fidelity values are higher-is-better except LPIPS;
+# runtime is mean FPS and reported VRAM on the reference hardware.
+table_1_asset_compression:
+  columns: [psnr_vehicle_db, psnr_all_db, ssim, lpips, fps, vram]
+  size_s_1_to_2_vehicles:
+    Plenoxels: [21.45, 23.06, 0.795, 0.510, 8.5, "2.5GB"]
+    Vanilla_3DGS: [28.52, 29.41, 0.903, 0.243, 55.4, "1.2GB"]
+    LightGaussian: [26.21, 27.50, 0.865, 0.281, 75.2, "180MB"]
+    DecoupleGS: [28.10, 29.25, 0.898, 0.252, 68.5, "850MB"]
+  size_m_3_to_5_vehicles:
+    Plenoxels: [20.12, 23.08, 0.626, 0.463, 6.2, "3.1GB"]
+    Vanilla_3DGS: [27.05, 27.21, 0.815, 0.214, 32.5, "2.1GB"]
+    LightGaussian: [25.14, 26.40, 0.781, 0.250, 58.6, "240MB"]
+    DecoupleGS: [26.85, 27.12, 0.805, 0.218, 52.4, "950MB"]
+  size_l_6_to_10_plus_vehicles:
+    Plenoxels: [18.55, 21.08, 0.719, 0.379, 3.5, "4.8GB"]
+    Vanilla_3DGS: [25.50, 25.14, 0.785, 0.255, 12.1, "3.8GB"]
+    LightGaussian: [23.52, 24.10, 0.720, 0.295, 45.0, "320MB"]
+    DecoupleGS: [25.24, 25.05, 0.772, 0.260, 38.5, "1.1GB"]
+
+# Values digitized from the scalability plot, so they are comparison bands,
+# not exact table cells. The paper explicitly reports 12.1/38.5 FPS at the
+# 6--10-vehicle operating point and Vanilla OOM before dense settings.
+figure_scalability_approximate:
+  agents: [1, 5, 10, 20, 50]
+  DecoupleGS:
+    fps: [68.5, 52.4, 38.5, 25.0, 15.0]
+    vram_gib: [0.85, 0.95, 1.10, 1.40, 2.20]
+  Vanilla_3DGS:
+    fps: [55.4, 32.5, 12.1, null, null]
+    vram_gib: [1.20, 2.10, 3.80, null, null]
+    oom_from_agents: 20
+
+figure_6_geometry_photometry:
+  exact_textual_targets:
+    DecoupleGS:
+      trajectory_ade_m: 0.05
+      peak_angular_error_degrees: 6.8
+    no_registration:
+      trajectory_ade_m: 0.48
+    no_relighting:
+      peak_angular_error_degrees: 48.5
+  approximate_plot_targets:
+    DecoupleGS:
+      ground_penetration_rate: 0.002
+      masked_psnr_db: 30.0
+
+# Same metric equations on the frozen public replacement cohort. These are
+# local measured values, not author-cohort targets and not a paper match.
+heldout_reinsertion_public_replacement:
+  protocol: "configs/benchmark/decouplegs_reinsertion_public.yaml"
+  result: "results/decouplegs/reinsertion-paper-protocol/evaluation-v1/protocol-summary.json"
+  scenes: 6
+  vehicle_tracks: 10
+  heldout_camera_views: 1296
+  nonempty_undilated_sam_masks: 210
+  columns: [masked_psnr_db, pie, pae_degrees, offline_camera_fps]
+  raw_native: [19.660, 0.3407, 10.669, 101.4]
+  compact_no_relighting: [19.610, 0.3420, 10.694, 214.6]
+  compact_public_hdri_ols: [18.148, 0.3596, 10.909, 179.3]
+  compact_public_hdri_ols_shadow: [18.159, 0.3594, 10.902, 104.7]
+  claim_scope: "paper equations; public replacement data/calibration; not author protocol"
+
+table_2_sim_to_real_and_closed_loop:
+  open_loop:
+    columns: [made_m, min_ttc_s]
+    real_images: [0.76, 3.5]
+    DecoupleGS: [0.82, 3.3]
+    HUGSIM: [0.94, 2.8]
+    RealEngine: [1.15, 2.4]
+    OASim: [1.02, 2.9]
+  closed_loop:
+    columns: [driving_score, route_completion, min_ttc_s, fps]
+    DecoupleGS: [0.884, 0.956, 3.3, 45]
+    HUGSIM: [0.765, 0.814, 2.3, 12]
+    RealEngine: [0.682, 0.795, 2.6, 32]
+    OASim: [0.748, 0.851, 2.8, 18]
+
+table_3_difficulty_stress_test:
+  columns: [driving_score, success_rate, route_completion, min_ttc]
+  values_are_mean_std_over_50_episodes: true
+  easy:
+    UniAD: [[0.725, 0.04], [0.850, 0.03], [0.780, 0.05], [0.812, 0.06]]
+    VAD: [[0.680, 0.05], [0.815, 0.04], [0.720, 0.06], [0.785, 0.05]]
+  medium:
+    UniAD: [[0.540, 0.06], [0.710, 0.05], [0.610, 0.07], [0.650, 0.08]]
+    VAD: [[0.450, 0.07], [0.630, 0.06], [0.520, 0.08], [0.580, 0.07]]
+  hard:
+    UniAD: [[0.380, 0.08], [0.520, 0.07], [0.450, 0.09], [0.480, 0.10]]
+    VAD: [[0.250, 0.09], [0.410, 0.08], [0.320, 0.10], [0.390, 0.09]]
+  extreme:
+    UniAD: [[0.195, 0.07], [0.310, 0.09], [0.250, 0.08], [0.280, 0.08]]
+    VAD: [[0.120, 0.05], [0.220, 0.07], [0.180, 0.06], [0.210, 0.06]]
+
+table_4_ablation_medium_density:
+  columns: [fps, trajectory_ade_m, peak_angular_error_degrees]
+  without_asset_compression: [8.5, 0.05, 6.8]
+  without_map_registration: [36.2, 0.48, 6.8]
+  without_relighting: [38.5, 0.05, 48.5]
+  full: [35.4, 0.05, 6.8]
+
+difficulty_definitions:
+  easy: "1--3 agents within 50 m; clear daylight; stable lane keeping"
+  medium: "4--8 agents; daytime or overcast; standard urban maneuvers"
+  hard: "9--15 agents; dusk, dawn, or heavy overcast"
+  extreme: ">15 agents; night or glare; hard braking and aggressive swerving/cut-ins"
+
+known_protocol_gaps_requiring_rd:
+  - "Exact 15 nuScenes clip IDs, 10 PandaSet sequence IDs, and 20 asset IDs"
+  - "Evaluation image resolution, timing warm-up, FPS aggregation, and VRAM definition"
+  - "Training-view sampling and normalization for V_i, D_i neighborhood, and H_i neighborhood"
+  - "HDRI calibration probe set and target relighting renderer"
+  - "Held-out vehicle identities/frame sampling, SAM checkpoint/prompt/post-processing, cross-image peak aggregation, and zero-norm PAE handling"
+  - "Cross-camera-pose temporal update and author-equivalent fully fused projection/sort/raster (exact same-camera radix cache plus stable Triton merge-path are implemented)"
+  - "Driving Score infraction factors, Success Rate terminal definition, and scenario seeds"

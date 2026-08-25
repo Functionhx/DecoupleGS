@@ -1,0 +1,85 @@
+mode: easy_40
+plan_list:
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 5.847422933133714
+  - '2024_07_05_10_58_02'
+  - IDMMOBILPlanner
+  - lane_id: 0
+    progress: 29.725854799997133
+    lane_offsets: &id001
+    - -3.5
+    - 0.0
+    - 3.5
+    allow_lane_changes: false
+    idm: &id002
+      desired_speed: 8.0
+      minimum_gap: 5.0
+      time_headway: 2.5
+      max_acceleration: 1.2
+      comfortable_deceleration: 3.0
+    mobil: &id003
+      acceleration_threshold: 999.0
+      politeness: 0.5
+    lane_change_duration: 3.0
+    lane_change_cooldown: 2.0
+    hard_brake_deceleration: 6.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 4.078116748645423
+  - '2024_07_05_10_40_08'
+  - IDMMOBILPlanner
+  - lane_id: 2
+    progress: 30.26718232752859
+    lane_offsets: *id001
+    allow_lane_changes: false
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 3.0
+    lane_change_cooldown: 2.0
+    hard_brake_deceleration: 6.0
+- - 0.0
+  - 0.0
+  - -0.3
+  - 0.0
+  - 4.021707216022849
+  - '2024_07_05_15_57_10'
+  - IDMMOBILPlanner
+  - lane_id: 1
+    progress: 29.670704981418655
+    lane_offsets: *id001
+    allow_lane_changes: false
+    idm: *id002
+    mobil: *id003
+    lane_change_duration: 3.0
+    lane_change_cooldown: 2.0
+    hard_brake_deceleration: 6.0
+load_HD_map: false
+start_euler:
+- 0.0
+- 0.0
+- 0.0
+start_ab:
+- 0.0
+- 0.0
+start_velo: 1.0
+start_steer: 0.0
+scene_name: scene-0010
+iteration: 30000
+decouplegs_stress:
+  schema_version: 1
+  hypothesis: H-SCENARIO-01 deterministic paper-scale scenario synthesis
+  difficulty: easy
+  seed: 260801801
+  dynamic_agents: 3
+  traffic_radius_m: 50.0
+  lighting:
+    kind: clear_day
+    exposure: 1.0
+    gamma: 1.0
+  behavior: IDM+MOBIL with H-BEHAVIOR-01/02 execution details
+  asset_unique_pool: 20

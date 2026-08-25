@@ -20,7 +20,7 @@ Siying Li · Ying Ni · Jie Sun · Jian Sun · Haotian Shi<br>
 </div>
 
 > [!IMPORTANT]
-> This is an **independent reimplementation from the public paper and supplementary material**, not the authors' code. It intentionally uses HUGSIM as a pinned submodule rather than copying or forking its repository.
+> This is an **independent reimplementation from the public paper and supplementary material**, not the authors' code. It intentionally uses HUGSIM as a pinned submodule rather than copying or forking its repository. All DecoupleGS Python source is published directly in `overlay/`.
 
 ## Overview
 
@@ -65,13 +65,13 @@ The paper's fused CUDA kernels and exact evaluation assets are unpublished. This
 ## Quick start
 
 ```bash
-git clone --recurse-submodules https://github.com/Functionhx/DecoupleGS.git
+git clone --recurse-submodules git@github.com:Functionhx/DecoupleGS.git
 cd DecoupleGS
 
-# Verify the pinned HUGSIM base and apply the complete DecoupleGS overlay.
+# Verify the pinned HUGSIM base and copy the complete DecoupleGS source overlay.
 bash scripts/bootstrap_hugsim.sh
 
-cd third_party/HUGSIM
+cd 3rdparty/HUGSIM
 bash tools/setup_decouplegs_conda.sh YOUR_EXISTING_ENV decouplegs
 conda activate decouplegs
 
@@ -79,7 +79,7 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q tests
 python tools/smoke_test_decouplegs_cuda.py
 ```
 
-For a fresh environment, create `environment-decouplegs.yml` inside `third_party/HUGSIM` first. The setup supports cloning an existing compatible Conda environment so cached packages and compiled dependencies are reused.
+For a fresh environment, create `environment-decouplegs.yml` inside `3rdparty/HUGSIM` first. The setup supports cloning an existing compatible Conda environment so cached packages and compiled dependencies are reused.
 
 ## Reproduction coverage
 
@@ -90,17 +90,19 @@ These results show that the released pipeline is executable end to end; they do 
 ## Repository layout
 
 ```text
-third_party/HUGSIM/          HUGSIM base, pinned as a Git submodule
-patches/decouplegs.patch.gz  complete binary-safe DecoupleGS source overlay
-scripts/bootstrap_hugsim.sh  validates the base commit and applies the overlay
+3rdparty/HUGSIM/             HUGSIM base, pinned as a Git submodule
+overlay/                     complete DecoupleGS Python, configs, tools, and tests
+scripts/bootstrap_hugsim.sh  validates the base commit and copies the overlay
 artifacts/                   checked-in visual results for this implementation
 METRICS.md                   paper-vs-reproduction metric notes
 ```
 
-The overlay is inspectable before application:
+The implementation is ordinary source code, not a compressed patch. Browse `overlay/decouplegs/`, `overlay/tools/`, `overlay/configs/`, and `overlay/tests/` directly on GitHub.
+
+To apply it manually:
 
 ```bash
-gzip -cd patches/decouplegs.patch.gz | git -C third_party/HUGSIM apply --stat
+cp -a overlay/. 3rdparty/HUGSIM/
 ```
 
 ## Data and dependencies

@@ -1,0 +1,13 @@
+# Compatibility-critical versions.  The source packages used by HUGSIM have
+# intentionally broad metadata; keep this file active for every pip install.
+torch==2.4.1
+torchvision==0.19.1
+torchaudio==2.4.1
+xformers==0.0.28.post1
+numpy==1.26.4
+pillow==11.3.0
+protobuf==3.20.2
+huggingface-hub==0.32.6
+gradio==5.23.3
+wandb==0.19.11
+zarr==2.18.7

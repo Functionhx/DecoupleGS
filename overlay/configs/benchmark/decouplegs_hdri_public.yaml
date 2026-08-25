@@ -1,0 +1,65 @@
+schema_version: 1
+hypothesis: H-LIGHT-03
+status: public_replacement_protocol_not_author_calibration
+note: >-
+  DecoupleGS does not release its HDRI set, relighting renderer, vehicle
+  materials, or per-primitive relit targets. These locally available HDR/EXR
+  panoramas form a frozen replacement protocol. Whole panoramas, including
+  all yaw/exposure/tint variants, remain in exactly one split.
+
+protocol:
+  target_definition_version: 2
+  environment_width: 192
+  yaw_rotations: 4
+  exposures: [0.45, 0.8, 1.2]
+  tints:
+    - [1.0, 1.0, 1.0]
+    - [1.30, 0.90, 0.68]
+    - [0.68, 0.92, 1.30]
+  sample_primitives: 2048
+  seed: 0
+  ridge_prior: identity
+  ridge_candidates: [1.0e-6, 1.0e-4, 1.0e-2, 1.0e-1, 1.0, 10.0]
+
+environments:
+  # Training panoramas: compact Blender/Kiui environment set.
+  - id: kiui_sunrise
+    split: train
+    path: data/decouplegs/hdri/train/sunrise.exr
+  - id: kiui_studio
+    split: train
+    path: data/decouplegs/hdri/train/studio.exr
+  - id: kiui_interior
+    split: train
+    path: data/decouplegs/hdri/train/interior.exr
+  - id: kiui_sunset
+    split: train
+    path: data/decouplegs/hdri/train/sunset.exr
+  - id: kiui_courtyard
+    split: train
+    path: data/decouplegs/hdri/train/courtyard.exr
+  - id: kiui_forest
+    split: train
+    path: data/decouplegs/hdri/train/forest.exr
+  - id: kiui_night
+    split: train
+    path: data/decouplegs/hdri/train/night.exr
+  - id: kiui_city
+    split: train
+    path: data/decouplegs/hdri/train/city.exr
+
+  # Validation panoramas select ridge; they are refit only after selection.
+  - id: omniverse_car_light
+    split: validation
+    path: data/decouplegs/hdri/validation/car-light.hdr
+  - id: omniverse_sunflowers
+    split: validation
+    path: data/decouplegs/hdri/validation/sunflowers.hdr
+
+  # Test panoramas are never used for ridge choice or final fitting.
+  - id: omniverse_photo_studio
+    split: test
+    path: data/decouplegs/hdri/test/photo-studio.hdr
+  - id: usd_stinson_beach
+    split: test
+    path: data/decouplegs/hdri/test/stinson-beach.hdr

@@ -1,0 +1,10 @@
+name: decouplegs
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+
+# This is the minimal fallback environment. Use the setup script to clone an
+# existing compatible environment when available and compile the CUDA
+# extensions with the correct ABI.

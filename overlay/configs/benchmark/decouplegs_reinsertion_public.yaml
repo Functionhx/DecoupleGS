@@ -1,0 +1,91 @@
+schema_version: 1
+hypothesis: H-PHOTO-01
+status: public_replacement_protocol_not_author_vehicle_split
+paper_reference: https://arxiv.org/html/2608.01761v1
+note: >-
+  DecoupleGS does not publish the held-out vehicle identities, image sampling,
+  SAM checkpoint/prompting, or cross-image aggregation used for Fig. 6. This
+  manifest freezes the closest leakage-free public replacement available in
+  the local HUGSIM/nuScenes reconstruction: dynamic assets learned only from
+  HUGSIM train views are reinserted at logged poses and evaluated on HUGSIM's
+  temporally held-out test views.
+
+frame_protocol:
+  dataset: nuScenes trainval
+  source: resized public camera images staged for HUGSIM
+  split: test
+  rule: "metadata frame-list index modulo 30 >= 24"
+  interpretation: "one synchronized six-camera timestamp held out in every five"
+  expected_views_per_scene: 216
+  primary_reason: >-
+    Official 2 Hz keyframes overlap the HUGSIM training split. They are useful
+    for planner evaluation but are not a leakage-free held-out rendering set.
+
+mask_protocol:
+  model: official Segment Anything
+  model_type: vit_h
+  checkpoint: data/checkpoints/sam_vit_h_4b8939.pth
+  prompt: per-vehicle projected canonical 3D convex hull as XYXY box plus foreground point
+  candidate_selection: highest predicted IoU
+  primary_dilation_pixels: 0
+  sensitivity_dilation_pixels: 5
+  note: >-
+    The metric section says precise SAM masks and does not state dilation.
+    Five-pixel dilation is disclosed for dynamic-object removal, so it is
+    reported only as a sensitivity analysis rather than silently made primary.
+
+metric_protocol:
+  image_decode: uint8 RGB divided by 255
+  masked_psnr: "10 log10(1 / mean_{u in M} ||I(u)-GT(u)||_2^2)"
+  pie: "max_{u in M} |Y(I(u))-Y(GT(u))|; Rec.709 luminance"
+  pae: "max_{u in M} acos(clamp(dot(I,GT)/(norm(I)norm(GT)),-1,1))"
+  primary_aggregation: arithmetic_mean_of_per_image_metrics
+  additional_aggregations: [median_per_image, dataset_peak, pooled_mask_psnr]
+  pae_zero_norm_policy:
+    literal: denominator_clamped_to_1e-12
+    sensitivity: exclude_pixels_where_either_rgb_norm_below_1_over_255
+
+paths:
+  model_root: data/decouplegs/scenes/nuscenes
+  source_root: data/decouplegs/nuscenes/hugsim_gt
+  compact_root: results/decouplegs/holdout-assets
+  nuscenes_metadata: data/decouplegs/nuscenes/Trainval/v1.0-trainval
+  public_hdri_protocol: configs/benchmark/decouplegs_hdri_public.yaml
+
+scenes:
+  scene-0010:
+    vehicles:
+      - track_id: e1c7c6e97d524ac5bbcf1785fd39cf9d
+        category: vehicle.bus.rigid
+  scene-0013:
+    vehicles:
+      - track_id: 6e298f45ca39473887bfe3df4a71e34f
+        category: vehicle.bus.rigid
+  scene-0038:
+    vehicles:
+      - track_id: a789e68daee847ba8800563251d51d77
+        category: vehicle.truck
+      - track_id: 42d6c29a6b674264b1ae7ad8c3bda4a7
+        category: vehicle.car
+  scene-0041:
+    vehicles:
+      - track_id: 0044aaa230fe4cbeb4b744031e33af29
+        category: vehicle.car
+      - track_id: 2c353f73ccc84c9a95b525279d900365
+        category: vehicle.car
+      - track_id: 7565096545544c2297866c66b0d29b6c
+        category: vehicle.car
+  scene-0051:
+    vehicles:
+      - track_id: 0d3118c15f364e048ef69c0efa507b2c
+        category: vehicle.car
+  scene-0064:
+    vehicles:
+      - track_id: 87ecbe0fa71343cba8b53dad4630d296
+        category: vehicle.car
+      - track_id: 9ccd36f27c7b49bab7e0bb8b6ad293bd
+        category: vehicle.car
+
+excluded_scenes:
+  scene-0062: no_reconstructed_dynamic_vehicle
+  scene-0071: reconstructed_dynamic_is_pedestrian_only

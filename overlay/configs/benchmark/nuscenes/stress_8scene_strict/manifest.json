@@ -1,0 +1,1471 @@
+{
+  "schema_version": 1,
+  "data_contract": {
+    "hypothesis": "H-DATA-05 balanced deterministic clip assignment",
+    "scene_pool": [
+      "scene-0010",
+      "scene-0013",
+      "scene-0038",
+      "scene-0041",
+      "scene-0051",
+      "scene-0062",
+      "scene-0064",
+      "scene-0071"
+    ],
+    "scene_selection": "round_robin_with_difficulty_offset",
+    "hugsim_revision": "38433e301bef99dca09f7bbd10f3145449fb66a2",
+    "paper_scene_ids_disclosed": false
+  },
+  "paper_protocol": {
+    "episodes_per_difficulty": 50,
+    "episode_seconds": 20,
+    "control_frequency_hz": 2,
+    "difficulty_agent_ranges": {
+      "easy": [
+        1,
+        3
+      ],
+      "medium": [
+        4,
+        8
+      ],
+      "hard": [
+        9,
+        15
+      ],
+      "extreme": [
+        16,
+        22
+      ]
+    }
+  },
+  "hypotheses": [
+    "H-SCENARIO-01 deterministic seeds and density stratification",
+    "H-BEHAVIOR-01 smooth polyline IDM+MOBIL execution",
+    "H-BEHAVIOR-02 synchronous non-overlap projection"
+  ],
+  "asset_pool": [
+    "2024_07_05_10_58_02",
+    "2024_07_05_11_02_48",
+    "2024_07_05_15_57_10",
+    "2024_07_05_16_10_02",
+    "2024_07_02_14_20_29",
+    "2024_06_04_13_44_39",
+    "2024_06_04_15_34_51",
+    "2024_07_01_14_01_13",
+    "2024_07_01_15_27_18",
+    "2024_04_22_10_35_34",
+    "2024_07_01_16_10_59",
+    "2024_07_05_10_40_08",
+    "2024_07_07_06_00_52",
+    "2024_07_02_13_45_45",
+    "2024_07_02_15_18_44",
+    "2024_07_05_16_48_24",
+    "2024_07_01_14_11_39",
+    "2024_07_09_04_28_04",
+    "2024_07_05_10_17_38",
+    "2024_07_01_17_29_14"
+  ],
+  "scenarios": [
+    {
+      "path": "scene-0010-easy_00.yaml",
+      "scene": "scene-0010",
+      "difficulty": "easy",
+      "seed": 260801761,
+      "agents": 1
+    },
+    {
+      "path": "scene-0013-easy_01.yaml",
+      "scene": "scene-0013",
+      "difficulty": "easy",
+      "seed": 260801762,
+      "agents": 1
+    },
+    {
+      "path": "scene-0038-easy_02.yaml",
+      "scene": "scene-0038",
+      "difficulty": "easy",
+      "seed": 260801763,
+      "agents": 1
+    },
+    {
+      "path": "scene-0041-easy_03.yaml",
+      "scene": "scene-0041",
+      "difficulty": "easy",
+      "seed": 260801764,
+      "agents": 1
+    },
+    {
+      "path": "scene-0051-easy_04.yaml",
+      "scene": "scene-0051",
+      "difficulty": "easy",
+      "seed": 260801765,
+      "agents": 1
+    },
+    {
+      "path": "scene-0062-easy_05.yaml",
+      "scene": "scene-0062",
+      "difficulty": "easy",
+      "seed": 260801766,
+      "agents": 1
+    },
+    {
+      "path": "scene-0064-easy_06.yaml",
+      "scene": "scene-0064",
+      "difficulty": "easy",
+      "seed": 260801767,
+      "agents": 1
+    },
+    {
+      "path": "scene-0071-easy_07.yaml",
+      "scene": "scene-0071",
+      "difficulty": "easy",
+      "seed": 260801768,
+      "agents": 1
+    },
+    {
+      "path": "scene-0010-easy_08.yaml",
+      "scene": "scene-0010",
+      "difficulty": "easy",
+      "seed": 260801769,
+      "agents": 1
+    },
+    {
+      "path": "scene-0013-easy_09.yaml",
+      "scene": "scene-0013",
+      "difficulty": "easy",
+      "seed": 260801770,
+      "agents": 1
+    },
+    {
+      "path": "scene-0038-easy_10.yaml",
+      "scene": "scene-0038",
+      "difficulty": "easy",
+      "seed": 260801771,
+      "agents": 1
+    },
+    {
+      "path": "scene-0041-easy_11.yaml",
+      "scene": "scene-0041",
+      "difficulty": "easy",
+      "seed": 260801772,
+      "agents": 1
+    },
+    {
+      "path": "scene-0051-easy_12.yaml",
+      "scene": "scene-0051",
+      "difficulty": "easy",
+      "seed": 260801773,
+      "agents": 1
+    },
+    {
+      "path": "scene-0062-easy_13.yaml",
+      "scene": "scene-0062",
+      "difficulty": "easy",
+      "seed": 260801774,
+      "agents": 2
+    },
+    {
+      "path": "scene-0064-easy_14.yaml",
+      "scene": "scene-0064",
+      "difficulty": "easy",
+      "seed": 260801775,
+      "agents": 2
+    },
+    {
+      "path": "scene-0071-easy_15.yaml",
+      "scene": "scene-0071",
+      "difficulty": "easy",
+      "seed": 260801776,
+      "agents": 2
+    },
+    {
+      "path": "scene-0010-easy_16.yaml",
+      "scene": "scene-0010",
+      "difficulty": "easy",
+      "seed": 260801777,
+      "agents": 2
+    },
+    {
+      "path": "scene-0013-easy_17.yaml",
+      "scene": "scene-0013",
+      "difficulty": "easy",
+      "seed": 260801778,
+      "agents": 2
+    },
+    {
+      "path": "scene-0038-easy_18.yaml",
+      "scene": "scene-0038",
+      "difficulty": "easy",
+      "seed": 260801779,
+      "agents": 2
+    },
+    {
+      "path": "scene-0041-easy_19.yaml",
+      "scene": "scene-0041",
+      "difficulty": "easy",
+      "seed": 260801780,
+      "agents": 2
+    },
+    {
+      "path": "scene-0051-easy_20.yaml",
+      "scene": "scene-0051",
+      "difficulty": "easy",
+      "seed": 260801781,
+      "agents": 2
+    },
+    {
+      "path": "scene-0062-easy_21.yaml",
+      "scene": "scene-0062",
+      "difficulty": "easy",
+      "seed": 260801782,
+      "agents": 2
+    },
+    {
+      "path": "scene-0064-easy_22.yaml",
+      "scene": "scene-0064",
+      "difficulty": "easy",
+      "seed": 260801783,
+      "agents": 2
+    },
+    {
+      "path": "scene-0071-easy_23.yaml",
+      "scene": "scene-0071",
+      "difficulty": "easy",
+      "seed": 260801784,
+      "agents": 2
+    },
+    {
+      "path": "scene-0010-easy_24.yaml",
+      "scene": "scene-0010",
+      "difficulty": "easy",
+      "seed": 260801785,
+      "agents": 2
+    },
+    {
+      "path": "scene-0013-easy_25.yaml",
+      "scene": "scene-0013",
+      "difficulty": "easy",
+      "seed": 260801786,
+      "agents": 2
+    },
+    {
+      "path": "scene-0038-easy_26.yaml",
+      "scene": "scene-0038",
+      "difficulty": "easy",
+      "seed": 260801787,
+      "agents": 2
+    },
+    {
+      "path": "scene-0041-easy_27.yaml",
+      "scene": "scene-0041",
+      "difficulty": "easy",
+      "seed": 260801788,
+      "agents": 2
+    },
+    {
+      "path": "scene-0051-easy_28.yaml",
+      "scene": "scene-0051",
+      "difficulty": "easy",
+      "seed": 260801789,
+      "agents": 2
+    },
+    {
+      "path": "scene-0062-easy_29.yaml",
+      "scene": "scene-0062",
+      "difficulty": "easy",
+      "seed": 260801790,
+      "agents": 2
+    },
+    {
+      "path": "scene-0064-easy_30.yaml",
+      "scene": "scene-0064",
+      "difficulty": "easy",
+      "seed": 260801791,
+      "agents": 2
+    },
+    {
+      "path": "scene-0071-easy_31.yaml",
+      "scene": "scene-0071",
+      "difficulty": "easy",
+      "seed": 260801792,
+      "agents": 2
+    },
+    {
+      "path": "scene-0010-easy_32.yaml",
+      "scene": "scene-0010",
+      "difficulty": "easy",
+      "seed": 260801793,
+      "agents": 2
+    },
+    {
+      "path": "scene-0013-easy_33.yaml",
+      "scene": "scene-0013",
+      "difficulty": "easy",
+      "seed": 260801794,
+      "agents": 2
+    },
+    {
+      "path": "scene-0038-easy_34.yaml",
+      "scene": "scene-0038",
+      "difficulty": "easy",
+      "seed": 260801795,
+      "agents": 2
+    },
+    {
+      "path": "scene-0041-easy_35.yaml",
+      "scene": "scene-0041",
+      "difficulty": "easy",
+      "seed": 260801796,
+      "agents": 2
+    },
+    {
+      "path": "scene-0051-easy_36.yaml",
+      "scene": "scene-0051",
+      "difficulty": "easy",
+      "seed": 260801797,
+      "agents": 2
+    },
+    {
+      "path": "scene-0062-easy_37.yaml",
+      "scene": "scene-0062",
+      "difficulty": "easy",
+      "seed": 260801798,
+      "agents": 3
+    },
+    {
+      "path": "scene-0064-easy_38.yaml",
+      "scene": "scene-0064",
+      "difficulty": "easy",
+      "seed": 260801799,
+      "agents": 3
+    },
+    {
+      "path": "scene-0071-easy_39.yaml",
+      "scene": "scene-0071",
+      "difficulty": "easy",
+      "seed": 260801800,
+      "agents": 3
+    },
+    {
+      "path": "scene-0010-easy_40.yaml",
+      "scene": "scene-0010",
+      "difficulty": "easy",
+      "seed": 260801801,
+      "agents": 3
+    },
+    {
+      "path": "scene-0013-easy_41.yaml",
+      "scene": "scene-0013",
+      "difficulty": "easy",
+      "seed": 260801802,
+      "agents": 3
+    },
+    {
+      "path": "scene-0038-easy_42.yaml",
+      "scene": "scene-0038",
+      "difficulty": "easy",
+      "seed": 260801803,
+      "agents": 3
+    },
+    {
+      "path": "scene-0041-easy_43.yaml",
+      "scene": "scene-0041",
+      "difficulty": "easy",
+      "seed": 260801804,
+      "agents": 3
+    },
+    {
+      "path": "scene-0051-easy_44.yaml",
+      "scene": "scene-0051",
+      "difficulty": "easy",
+      "seed": 260801805,
+      "agents": 3
+    },
+    {
+      "path": "scene-0062-easy_45.yaml",
+      "scene": "scene-0062",
+      "difficulty": "easy",
+      "seed": 260801806,
+      "agents": 3
+    },
+    {
+      "path": "scene-0064-easy_46.yaml",
+      "scene": "scene-0064",
+      "difficulty": "easy",
+      "seed": 260801807,
+      "agents": 3
+    },
+    {
+      "path": "scene-0071-easy_47.yaml",
+      "scene": "scene-0071",
+      "difficulty": "easy",
+      "seed": 260801808,
+      "agents": 3
+    },
+    {
+      "path": "scene-0010-easy_48.yaml",
+      "scene": "scene-0010",
+      "difficulty": "easy",
+      "seed": 260801809,
+      "agents": 3
+    },
+    {
+      "path": "scene-0013-easy_49.yaml",
+      "scene": "scene-0013",
+      "difficulty": "easy",
+      "seed": 260801810,
+      "agents": 3
+    },
+    {
+      "path": "scene-0038-medium_00.yaml",
+      "scene": "scene-0038",
+      "difficulty": "medium",
+      "seed": 260901761,
+      "agents": 4
+    },
+    {
+      "path": "scene-0041-medium_01.yaml",
+      "scene": "scene-0041",
+      "difficulty": "medium",
+      "seed": 260901762,
+      "agents": 4
+    },
+    {
+      "path": "scene-0051-medium_02.yaml",
+      "scene": "scene-0051",
+      "difficulty": "medium",
+      "seed": 260901763,
+      "agents": 4
+    },
+    {
+      "path": "scene-0062-medium_03.yaml",
+      "scene": "scene-0062",
+      "difficulty": "medium",
+      "seed": 260901764,
+      "agents": 4
+    },
+    {
+      "path": "scene-0064-medium_04.yaml",
+      "scene": "scene-0064",
+      "difficulty": "medium",
+      "seed": 260901765,
+      "agents": 4
+    },
+    {
+      "path": "scene-0071-medium_05.yaml",
+      "scene": "scene-0071",
+      "difficulty": "medium",
+      "seed": 260901766,
+      "agents": 4
+    },
+    {
+      "path": "scene-0010-medium_06.yaml",
+      "scene": "scene-0010",
+      "difficulty": "medium",
+      "seed": 260901767,
+      "agents": 4
+    },
+    {
+      "path": "scene-0013-medium_07.yaml",
+      "scene": "scene-0013",
+      "difficulty": "medium",
+      "seed": 260901768,
+      "agents": 5
+    },
+    {
+      "path": "scene-0038-medium_08.yaml",
+      "scene": "scene-0038",
+      "difficulty": "medium",
+      "seed": 260901769,
+      "agents": 5
+    },
+    {
+      "path": "scene-0041-medium_09.yaml",
+      "scene": "scene-0041",
+      "difficulty": "medium",
+      "seed": 260901770,
+      "agents": 5
+    },
+    {
+      "path": "scene-0051-medium_10.yaml",
+      "scene": "scene-0051",
+      "difficulty": "medium",
+      "seed": 260901771,
+      "agents": 5
+    },
+    {
+      "path": "scene-0062-medium_11.yaml",
+      "scene": "scene-0062",
+      "difficulty": "medium",
+      "seed": 260901772,
+      "agents": 5
+    },
+    {
+      "path": "scene-0064-medium_12.yaml",
+      "scene": "scene-0064",
+      "difficulty": "medium",
+      "seed": 260901773,
+      "agents": 5
+    },
+    {
+      "path": "scene-0071-medium_13.yaml",
+      "scene": "scene-0071",
+      "difficulty": "medium",
+      "seed": 260901774,
+      "agents": 5
+    },
+    {
+      "path": "scene-0010-medium_14.yaml",
+      "scene": "scene-0010",
+      "difficulty": "medium",
+      "seed": 260901775,
+      "agents": 5
+    },
+    {
+      "path": "scene-0013-medium_15.yaml",
+      "scene": "scene-0013",
+      "difficulty": "medium",
+      "seed": 260901776,
+      "agents": 5
+    },
+    {
+      "path": "scene-0038-medium_16.yaml",
+      "scene": "scene-0038",
+      "difficulty": "medium",
+      "seed": 260901777,
+      "agents": 5
+    },
+    {
+      "path": "scene-0041-medium_17.yaml",
+      "scene": "scene-0041",
+      "difficulty": "medium",
+      "seed": 260901778,
+      "agents": 5
+    },
+    {
+      "path": "scene-0051-medium_18.yaml",
+      "scene": "scene-0051",
+      "difficulty": "medium",
+      "seed": 260901779,
+      "agents": 5
+    },
+    {
+      "path": "scene-0062-medium_19.yaml",
+      "scene": "scene-0062",
+      "difficulty": "medium",
+      "seed": 260901780,
+      "agents": 6
+    },
+    {
+      "path": "scene-0064-medium_20.yaml",
+      "scene": "scene-0064",
+      "difficulty": "medium",
+      "seed": 260901781,
+      "agents": 6
+    },
+    {
+      "path": "scene-0071-medium_21.yaml",
+      "scene": "scene-0071",
+      "difficulty": "medium",
+      "seed": 260901782,
+      "agents": 6
+    },
+    {
+      "path": "scene-0010-medium_22.yaml",
+      "scene": "scene-0010",
+      "difficulty": "medium",
+      "seed": 260901783,
+      "agents": 6
+    },
+    {
+      "path": "scene-0013-medium_23.yaml",
+      "scene": "scene-0013",
+      "difficulty": "medium",
+      "seed": 260901784,
+      "agents": 6
+    },
+    {
+      "path": "scene-0038-medium_24.yaml",
+      "scene": "scene-0038",
+      "difficulty": "medium",
+      "seed": 260901785,
+      "agents": 6
+    },
+    {
+      "path": "scene-0041-medium_25.yaml",
+      "scene": "scene-0041",
+      "difficulty": "medium",
+      "seed": 260901786,
+      "agents": 6
+    },
+    {
+      "path": "scene-0051-medium_26.yaml",
+      "scene": "scene-0051",
+      "difficulty": "medium",
+      "seed": 260901787,
+      "agents": 6
+    },
+    {
+      "path": "scene-0062-medium_27.yaml",
+      "scene": "scene-0062",
+      "difficulty": "medium",
+      "seed": 260901788,
+      "agents": 6
+    },
+    {
+      "path": "scene-0064-medium_28.yaml",
+      "scene": "scene-0064",
+      "difficulty": "medium",
+      "seed": 260901789,
+      "agents": 6
+    },
+    {
+      "path": "scene-0071-medium_29.yaml",
+      "scene": "scene-0071",
+      "difficulty": "medium",
+      "seed": 260901790,
+      "agents": 6
+    },
+    {
+      "path": "scene-0010-medium_30.yaml",
+      "scene": "scene-0010",
+      "difficulty": "medium",
+      "seed": 260901791,
+      "agents": 6
+    },
+    {
+      "path": "scene-0013-medium_31.yaml",
+      "scene": "scene-0013",
+      "difficulty": "medium",
+      "seed": 260901792,
+      "agents": 7
+    },
+    {
+      "path": "scene-0038-medium_32.yaml",
+      "scene": "scene-0038",
+      "difficulty": "medium",
+      "seed": 260901793,
+      "agents": 7
+    },
+    {
+      "path": "scene-0041-medium_33.yaml",
+      "scene": "scene-0041",
+      "difficulty": "medium",
+      "seed": 260901794,
+      "agents": 7
+    },
+    {
+      "path": "scene-0051-medium_34.yaml",
+      "scene": "scene-0051",
+      "difficulty": "medium",
+      "seed": 260901795,
+      "agents": 7
+    },
+    {
+      "path": "scene-0062-medium_35.yaml",
+      "scene": "scene-0062",
+      "difficulty": "medium",
+      "seed": 260901796,
+      "agents": 7
+    },
+    {
+      "path": "scene-0064-medium_36.yaml",
+      "scene": "scene-0064",
+      "difficulty": "medium",
+      "seed": 260901797,
+      "agents": 7
+    },
+    {
+      "path": "scene-0071-medium_37.yaml",
+      "scene": "scene-0071",
+      "difficulty": "medium",
+      "seed": 260901798,
+      "agents": 7
+    },
+    {
+      "path": "scene-0010-medium_38.yaml",
+      "scene": "scene-0010",
+      "difficulty": "medium",
+      "seed": 260901799,
+      "agents": 7
+    },
+    {
+      "path": "scene-0013-medium_39.yaml",
+      "scene": "scene-0013",
+      "difficulty": "medium",
+      "seed": 260901800,
+      "agents": 7
+    },
+    {
+      "path": "scene-0038-medium_40.yaml",
+      "scene": "scene-0038",
+      "difficulty": "medium",
+      "seed": 260901801,
+      "agents": 7
+    },
+    {
+      "path": "scene-0041-medium_41.yaml",
+      "scene": "scene-0041",
+      "difficulty": "medium",
+      "seed": 260901802,
+      "agents": 7
+    },
+    {
+      "path": "scene-0051-medium_42.yaml",
+      "scene": "scene-0051",
+      "difficulty": "medium",
+      "seed": 260901803,
+      "agents": 7
+    },
+    {
+      "path": "scene-0062-medium_43.yaml",
+      "scene": "scene-0062",
+      "difficulty": "medium",
+      "seed": 260901804,
+      "agents": 8
+    },
+    {
+      "path": "scene-0064-medium_44.yaml",
+      "scene": "scene-0064",
+      "difficulty": "medium",
+      "seed": 260901805,
+      "agents": 8
+    },
+    {
+      "path": "scene-0071-medium_45.yaml",
+      "scene": "scene-0071",
+      "difficulty": "medium",
+      "seed": 260901806,
+      "agents": 8
+    },
+    {
+      "path": "scene-0010-medium_46.yaml",
+      "scene": "scene-0010",
+      "difficulty": "medium",
+      "seed": 260901807,
+      "agents": 8
+    },
+    {
+      "path": "scene-0013-medium_47.yaml",
+      "scene": "scene-0013",
+      "difficulty": "medium",
+      "seed": 260901808,
+      "agents": 8
+    },
+    {
+      "path": "scene-0038-medium_48.yaml",
+      "scene": "scene-0038",
+      "difficulty": "medium",
+      "seed": 260901809,
+      "agents": 8
+    },
+    {
+      "path": "scene-0041-medium_49.yaml",
+      "scene": "scene-0041",
+      "difficulty": "medium",
+      "seed": 260901810,
+      "agents": 8
+    },
+    {
+      "path": "scene-0051-hard_00.yaml",
+      "scene": "scene-0051",
+      "difficulty": "hard",
+      "seed": 261001761,
+      "agents": 9
+    },
+    {
+      "path": "scene-0062-hard_01.yaml",
+      "scene": "scene-0062",
+      "difficulty": "hard",
+      "seed": 261001762,
+      "agents": 9
+    },
+    {
+      "path": "scene-0064-hard_02.yaml",
+      "scene": "scene-0064",
+      "difficulty": "hard",
+      "seed": 261001763,
+      "agents": 9
+    },
+    {
+      "path": "scene-0071-hard_03.yaml",
+      "scene": "scene-0071",
+      "difficulty": "hard",
+      "seed": 261001764,
+      "agents": 9
+    },
+    {
+      "path": "scene-0010-hard_04.yaml",
+      "scene": "scene-0010",
+      "difficulty": "hard",
+      "seed": 261001765,
+      "agents": 9
+    },
+    {
+      "path": "scene-0013-hard_05.yaml",
+      "scene": "scene-0013",
+      "difficulty": "hard",
+      "seed": 261001766,
+      "agents": 10
+    },
+    {
+      "path": "scene-0038-hard_06.yaml",
+      "scene": "scene-0038",
+      "difficulty": "hard",
+      "seed": 261001767,
+      "agents": 10
+    },
+    {
+      "path": "scene-0041-hard_07.yaml",
+      "scene": "scene-0041",
+      "difficulty": "hard",
+      "seed": 261001768,
+      "agents": 10
+    },
+    {
+      "path": "scene-0051-hard_08.yaml",
+      "scene": "scene-0051",
+      "difficulty": "hard",
+      "seed": 261001769,
+      "agents": 10
+    },
+    {
+      "path": "scene-0062-hard_09.yaml",
+      "scene": "scene-0062",
+      "difficulty": "hard",
+      "seed": 261001770,
+      "agents": 10
+    },
+    {
+      "path": "scene-0064-hard_10.yaml",
+      "scene": "scene-0064",
+      "difficulty": "hard",
+      "seed": 261001771,
+      "agents": 10
+    },
+    {
+      "path": "scene-0071-hard_11.yaml",
+      "scene": "scene-0071",
+      "difficulty": "hard",
+      "seed": 261001772,
+      "agents": 10
+    },
+    {
+      "path": "scene-0010-hard_12.yaml",
+      "scene": "scene-0010",
+      "difficulty": "hard",
+      "seed": 261001773,
+      "agents": 10
+    },
+    {
+      "path": "scene-0013-hard_13.yaml",
+      "scene": "scene-0013",
+      "difficulty": "hard",
+      "seed": 261001774,
+      "agents": 11
+    },
+    {
+      "path": "scene-0038-hard_14.yaml",
+      "scene": "scene-0038",
+      "difficulty": "hard",
+      "seed": 261001775,
+      "agents": 11
+    },
+    {
+      "path": "scene-0041-hard_15.yaml",
+      "scene": "scene-0041",
+      "difficulty": "hard",
+      "seed": 261001776,
+      "agents": 11
+    },
+    {
+      "path": "scene-0051-hard_16.yaml",
+      "scene": "scene-0051",
+      "difficulty": "hard",
+      "seed": 261001777,
+      "agents": 11
+    },
+    {
+      "path": "scene-0062-hard_17.yaml",
+      "scene": "scene-0062",
+      "difficulty": "hard",
+      "seed": 261001778,
+      "agents": 11
+    },
+    {
+      "path": "scene-0064-hard_18.yaml",
+      "scene": "scene-0064",
+      "difficulty": "hard",
+      "seed": 261001779,
+      "agents": 11
+    },
+    {
+      "path": "scene-0071-hard_19.yaml",
+      "scene": "scene-0071",
+      "difficulty": "hard",
+      "seed": 261001780,
+      "agents": 11
+    },
+    {
+      "path": "scene-0010-hard_20.yaml",
+      "scene": "scene-0010",
+      "difficulty": "hard",
+      "seed": 261001781,
+      "agents": 11
+    },
+    {
+      "path": "scene-0013-hard_21.yaml",
+      "scene": "scene-0013",
+      "difficulty": "hard",
+      "seed": 261001782,
+      "agents": 12
+    },
+    {
+      "path": "scene-0038-hard_22.yaml",
+      "scene": "scene-0038",
+      "difficulty": "hard",
+      "seed": 261001783,
+      "agents": 12
+    },
+    {
+      "path": "scene-0041-hard_23.yaml",
+      "scene": "scene-0041",
+      "difficulty": "hard",
+      "seed": 261001784,
+      "agents": 12
+    },
+    {
+      "path": "scene-0051-hard_24.yaml",
+      "scene": "scene-0051",
+      "difficulty": "hard",
+      "seed": 261001785,
+      "agents": 12
+    },
+    {
+      "path": "scene-0062-hard_25.yaml",
+      "scene": "scene-0062",
+      "difficulty": "hard",
+      "seed": 261001786,
+      "agents": 12
+    },
+    {
+      "path": "scene-0064-hard_26.yaml",
+      "scene": "scene-0064",
+      "difficulty": "hard",
+      "seed": 261001787,
+      "agents": 12
+    },
+    {
+      "path": "scene-0071-hard_27.yaml",
+      "scene": "scene-0071",
+      "difficulty": "hard",
+      "seed": 261001788,
+      "agents": 12
+    },
+    {
+      "path": "scene-0010-hard_28.yaml",
+      "scene": "scene-0010",
+      "difficulty": "hard",
+      "seed": 261001789,
+      "agents": 12
+    },
+    {
+      "path": "scene-0013-hard_29.yaml",
+      "scene": "scene-0013",
+      "difficulty": "hard",
+      "seed": 261001790,
+      "agents": 13
+    },
+    {
+      "path": "scene-0038-hard_30.yaml",
+      "scene": "scene-0038",
+      "difficulty": "hard",
+      "seed": 261001791,
+      "agents": 13
+    },
+    {
+      "path": "scene-0041-hard_31.yaml",
+      "scene": "scene-0041",
+      "difficulty": "hard",
+      "seed": 261001792,
+      "agents": 13
+    },
+    {
+      "path": "scene-0051-hard_32.yaml",
+      "scene": "scene-0051",
+      "difficulty": "hard",
+      "seed": 261001793,
+      "agents": 13
+    },
+    {
+      "path": "scene-0062-hard_33.yaml",
+      "scene": "scene-0062",
+      "difficulty": "hard",
+      "seed": 261001794,
+      "agents": 13
+    },
+    {
+      "path": "scene-0064-hard_34.yaml",
+      "scene": "scene-0064",
+      "difficulty": "hard",
+      "seed": 261001795,
+      "agents": 13
+    },
+    {
+      "path": "scene-0071-hard_35.yaml",
+      "scene": "scene-0071",
+      "difficulty": "hard",
+      "seed": 261001796,
+      "agents": 13
+    },
+    {
+      "path": "scene-0010-hard_36.yaml",
+      "scene": "scene-0010",
+      "difficulty": "hard",
+      "seed": 261001797,
+      "agents": 13
+    },
+    {
+      "path": "scene-0013-hard_37.yaml",
+      "scene": "scene-0013",
+      "difficulty": "hard",
+      "seed": 261001798,
+      "agents": 14
+    },
+    {
+      "path": "scene-0038-hard_38.yaml",
+      "scene": "scene-0038",
+      "difficulty": "hard",
+      "seed": 261001799,
+      "agents": 14
+    },
+    {
+      "path": "scene-0041-hard_39.yaml",
+      "scene": "scene-0041",
+      "difficulty": "hard",
+      "seed": 261001800,
+      "agents": 14
+    },
+    {
+      "path": "scene-0051-hard_40.yaml",
+      "scene": "scene-0051",
+      "difficulty": "hard",
+      "seed": 261001801,
+      "agents": 14
+    },
+    {
+      "path": "scene-0062-hard_41.yaml",
+      "scene": "scene-0062",
+      "difficulty": "hard",
+      "seed": 261001802,
+      "agents": 14
+    },
+    {
+      "path": "scene-0064-hard_42.yaml",
+      "scene": "scene-0064",
+      "difficulty": "hard",
+      "seed": 261001803,
+      "agents": 14
+    },
+    {
+      "path": "scene-0071-hard_43.yaml",
+      "scene": "scene-0071",
+      "difficulty": "hard",
+      "seed": 261001804,
+      "agents": 14
+    },
+    {
+      "path": "scene-0010-hard_44.yaml",
+      "scene": "scene-0010",
+      "difficulty": "hard",
+      "seed": 261001805,
+      "agents": 14
+    },
+    {
+      "path": "scene-0013-hard_45.yaml",
+      "scene": "scene-0013",
+      "difficulty": "hard",
+      "seed": 261001806,
+      "agents": 15
+    },
+    {
+      "path": "scene-0038-hard_46.yaml",
+      "scene": "scene-0038",
+      "difficulty": "hard",
+      "seed": 261001807,
+      "agents": 15
+    },
+    {
+      "path": "scene-0041-hard_47.yaml",
+      "scene": "scene-0041",
+      "difficulty": "hard",
+      "seed": 261001808,
+      "agents": 15
+    },
+    {
+      "path": "scene-0051-hard_48.yaml",
+      "scene": "scene-0051",
+      "difficulty": "hard",
+      "seed": 261001809,
+      "agents": 15
+    },
+    {
+      "path": "scene-0062-hard_49.yaml",
+      "scene": "scene-0062",
+      "difficulty": "hard",
+      "seed": 261001810,
+      "agents": 15
+    },
+    {
+      "path": "scene-0064-extreme_00.yaml",
+      "scene": "scene-0064",
+      "difficulty": "extreme",
+      "seed": 261101761,
+      "agents": 16
+    },
+    {
+      "path": "scene-0071-extreme_01.yaml",
+      "scene": "scene-0071",
+      "difficulty": "extreme",
+      "seed": 261101762,
+      "agents": 16
+    },
+    {
+      "path": "scene-0010-extreme_02.yaml",
+      "scene": "scene-0010",
+      "difficulty": "extreme",
+      "seed": 261101763,
+      "agents": 16
+    },
+    {
+      "path": "scene-0013-extreme_03.yaml",
+      "scene": "scene-0013",
+      "difficulty": "extreme",
+      "seed": 261101764,
+      "agents": 16
+    },
+    {
+      "path": "scene-0038-extreme_04.yaml",
+      "scene": "scene-0038",
+      "difficulty": "extreme",
+      "seed": 261101765,
+      "agents": 16
+    },
+    {
+      "path": "scene-0041-extreme_05.yaml",
+      "scene": "scene-0041",
+      "difficulty": "extreme",
+      "seed": 261101766,
+      "agents": 17
+    },
+    {
+      "path": "scene-0051-extreme_06.yaml",
+      "scene": "scene-0051",
+      "difficulty": "extreme",
+      "seed": 261101767,
+      "agents": 17
+    },
+    {
+      "path": "scene-0062-extreme_07.yaml",
+      "scene": "scene-0062",
+      "difficulty": "extreme",
+      "seed": 261101768,
+      "agents": 17
+    },
+    {
+      "path": "scene-0064-extreme_08.yaml",
+      "scene": "scene-0064",
+      "difficulty": "extreme",
+      "seed": 261101769,
+      "agents": 17
+    },
+    {
+      "path": "scene-0071-extreme_09.yaml",
+      "scene": "scene-0071",
+      "difficulty": "extreme",
+      "seed": 261101770,
+      "agents": 17
+    },
+    {
+      "path": "scene-0010-extreme_10.yaml",
+      "scene": "scene-0010",
+      "difficulty": "extreme",
+      "seed": 261101771,
+      "agents": 17
+    },
+    {
+      "path": "scene-0013-extreme_11.yaml",
+      "scene": "scene-0013",
+      "difficulty": "extreme",
+      "seed": 261101772,
+      "agents": 17
+    },
+    {
+      "path": "scene-0038-extreme_12.yaml",
+      "scene": "scene-0038",
+      "difficulty": "extreme",
+      "seed": 261101773,
+      "agents": 17
+    },
+    {
+      "path": "scene-0041-extreme_13.yaml",
+      "scene": "scene-0041",
+      "difficulty": "extreme",
+      "seed": 261101774,
+      "agents": 18
+    },
+    {
+      "path": "scene-0051-extreme_14.yaml",
+      "scene": "scene-0051",
+      "difficulty": "extreme",
+      "seed": 261101775,
+      "agents": 18
+    },
+    {
+      "path": "scene-0062-extreme_15.yaml",
+      "scene": "scene-0062",
+      "difficulty": "extreme",
+      "seed": 261101776,
+      "agents": 18
+    },
+    {
+      "path": "scene-0064-extreme_16.yaml",
+      "scene": "scene-0064",
+      "difficulty": "extreme",
+      "seed": 261101777,
+      "agents": 18
+    },
+    {
+      "path": "scene-0071-extreme_17.yaml",
+      "scene": "scene-0071",
+      "difficulty": "extreme",
+      "seed": 261101778,
+      "agents": 18
+    },
+    {
+      "path": "scene-0010-extreme_18.yaml",
+      "scene": "scene-0010",
+      "difficulty": "extreme",
+      "seed": 261101779,
+      "agents": 18
+    },
+    {
+      "path": "scene-0013-extreme_19.yaml",
+      "scene": "scene-0013",
+      "difficulty": "extreme",
+      "seed": 261101780,
+      "agents": 18
+    },
+    {
+      "path": "scene-0038-extreme_20.yaml",
+      "scene": "scene-0038",
+      "difficulty": "extreme",
+      "seed": 261101781,
+      "agents": 18
+    },
+    {
+      "path": "scene-0041-extreme_21.yaml",
+      "scene": "scene-0041",
+      "difficulty": "extreme",
+      "seed": 261101782,
+      "agents": 19
+    },
+    {
+      "path": "scene-0051-extreme_22.yaml",
+      "scene": "scene-0051",
+      "difficulty": "extreme",
+      "seed": 261101783,
+      "agents": 19
+    },
+    {
+      "path": "scene-0062-extreme_23.yaml",
+      "scene": "scene-0062",
+      "difficulty": "extreme",
+      "seed": 261101784,
+      "agents": 19
+    },
+    {
+      "path": "scene-0064-extreme_24.yaml",
+      "scene": "scene-0064",
+      "difficulty": "extreme",
+      "seed": 261101785,
+      "agents": 19
+    },
+    {
+      "path": "scene-0071-extreme_25.yaml",
+      "scene": "scene-0071",
+      "difficulty": "extreme",
+      "seed": 261101786,
+      "agents": 19
+    },
+    {
+      "path": "scene-0010-extreme_26.yaml",
+      "scene": "scene-0010",
+      "difficulty": "extreme",
+      "seed": 261101787,
+      "agents": 19
+    },
+    {
+      "path": "scene-0013-extreme_27.yaml",
+      "scene": "scene-0013",
+      "difficulty": "extreme",
+      "seed": 261101788,
+      "agents": 19
+    },
+    {
+      "path": "scene-0038-extreme_28.yaml",
+      "scene": "scene-0038",
+      "difficulty": "extreme",
+      "seed": 261101789,
+      "agents": 19
+    },
+    {
+      "path": "scene-0041-extreme_29.yaml",
+      "scene": "scene-0041",
+      "difficulty": "extreme",
+      "seed": 261101790,
+      "agents": 20
+    },
+    {
+      "path": "scene-0051-extreme_30.yaml",
+      "scene": "scene-0051",
+      "difficulty": "extreme",
+      "seed": 261101791,
+      "agents": 20
+    },
+    {
+      "path": "scene-0062-extreme_31.yaml",
+      "scene": "scene-0062",
+      "difficulty": "extreme",
+      "seed": 261101792,
+      "agents": 20
+    },
+    {
+      "path": "scene-0064-extreme_32.yaml",
+      "scene": "scene-0064",
+      "difficulty": "extreme",
+      "seed": 261101793,
+      "agents": 20
+    },
+    {
+      "path": "scene-0071-extreme_33.yaml",
+      "scene": "scene-0071",
+      "difficulty": "extreme",
+      "seed": 261101794,
+      "agents": 20
+    },
+    {
+      "path": "scene-0010-extreme_34.yaml",
+      "scene": "scene-0010",
+      "difficulty": "extreme",
+      "seed": 261101795,
+      "agents": 20
+    },
+    {
+      "path": "scene-0013-extreme_35.yaml",
+      "scene": "scene-0013",
+      "difficulty": "extreme",
+      "seed": 261101796,
+      "agents": 20
+    },
+    {
+      "path": "scene-0038-extreme_36.yaml",
+      "scene": "scene-0038",
+      "difficulty": "extreme",
+      "seed": 261101797,
+      "agents": 20
+    },
+    {
+      "path": "scene-0041-extreme_37.yaml",
+      "scene": "scene-0041",
+      "difficulty": "extreme",
+      "seed": 261101798,
+      "agents": 21
+    },
+    {
+      "path": "scene-0051-extreme_38.yaml",
+      "scene": "scene-0051",
+      "difficulty": "extreme",
+      "seed": 261101799,
+      "agents": 21
+    },
+    {
+      "path": "scene-0062-extreme_39.yaml",
+      "scene": "scene-0062",
+      "difficulty": "extreme",
+      "seed": 261101800,
+      "agents": 21
+    },
+    {
+      "path": "scene-0064-extreme_40.yaml",
+      "scene": "scene-0064",
+      "difficulty": "extreme",
+      "seed": 261101801,
+      "agents": 21
+    },
+    {
+      "path": "scene-0071-extreme_41.yaml",
+      "scene": "scene-0071",
+      "difficulty": "extreme",
+      "seed": 261101802,
+      "agents": 21
+    },
+    {
+      "path": "scene-0010-extreme_42.yaml",
+      "scene": "scene-0010",
+      "difficulty": "extreme",
+      "seed": 261101803,
+      "agents": 21
+    },
+    {
+      "path": "scene-0013-extreme_43.yaml",
+      "scene": "scene-0013",
+      "difficulty": "extreme",
+      "seed": 261101804,
+      "agents": 21
+    },
+    {
+      "path": "scene-0038-extreme_44.yaml",
+      "scene": "scene-0038",
+      "difficulty": "extreme",
+      "seed": 261101805,
+      "agents": 21
+    },
+    {
+      "path": "scene-0041-extreme_45.yaml",
+      "scene": "scene-0041",
+      "difficulty": "extreme",
+      "seed": 261101806,
+      "agents": 22
+    },
+    {
+      "path": "scene-0051-extreme_46.yaml",
+      "scene": "scene-0051",
+      "difficulty": "extreme",
+      "seed": 261101807,
+      "agents": 22
+    },
+    {
+      "path": "scene-0062-extreme_47.yaml",
+      "scene": "scene-0062",
+      "difficulty": "extreme",
+      "seed": 261101808,
+      "agents": 22
+    },
+    {
+      "path": "scene-0064-extreme_48.yaml",
+      "scene": "scene-0064",
+      "difficulty": "extreme",
+      "seed": 261101809,
+      "agents": 22
+    },
+    {
+      "path": "scene-0071-extreme_49.yaml",
+      "scene": "scene-0071",
+      "difficulty": "extreme",
+      "seed": 261101810,
+      "agents": 22
+    }
+  ]
+}
