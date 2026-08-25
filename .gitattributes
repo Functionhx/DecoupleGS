@@ -1,0 +1,3 @@
+# The implementation overlay is first-party source, not vendored code.
+overlay/** linguist-detectable=true
+overlay/** linguist-vendored=false
