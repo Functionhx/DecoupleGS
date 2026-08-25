@@ -1,0 +1,66 @@
+{
+  "scene": "HUGSIM/scenes/nuscenes/scene-0013",
+  "asset": "3DRealCar/2024_07_05_10_58_02/gs.pth",
+  "scene_iteration": 30000,
+  "asset_iteration": 30000,
+  "background_gaussians": 1814109,
+  "asset_gaussians": 402492,
+  "resolution": [
+    400,
+    225
+  ],
+  "frame_index": 0,
+  "placement": {
+    "distance": 14.0,
+    "lateral": 0.0,
+    "camera_height": 1.5
+  },
+  "relighting": {
+    "mode": "adaptive_fallback",
+    "calibration": null,
+    "adaptive_strength": 0.65
+  },
+  "shadow_strength": 0.55,
+  "crop_box_xyxy": [
+    152,
+    92,
+    256,
+    196
+  ],
+  "difference_gain": 20.0,
+  "elapsed_seconds": {
+    "background": 0.36633142399659846,
+    "00_raw": 0.042923356995743234,
+    "01_sh_rotation": 0.04043064599682111,
+    "02_grounding": 0.2392807400028687,
+    "03_relighting": 0.034729790000710636,
+    "04_full_shadow": 0.038362998006050475
+  },
+  "step_metrics": {
+    "00_raw_to_01_sh_rotation": {
+      "mean_absolute_error": 0.00028823749744333327,
+      "maximum_absolute_error": 0.17991942167282104,
+      "fraction_pixels_changed_gt_1_255": 0.015577777777777777
+    },
+    "01_sh_rotation_to_02_grounding": {
+      "mean_absolute_error": 0.001002994365990162,
+      "maximum_absolute_error": 0.5957585573196411,
+      "fraction_pixels_changed_gt_1_255": 0.017533333333333335
+    },
+    "02_grounding_to_03_relighting": {
+      "mean_absolute_error": 0.0005104963202029467,
+      "maximum_absolute_error": 0.075306236743927,
+      "fraction_pixels_changed_gt_1_255": 0.01598888888888889
+    },
+    "03_relighting_to_04_full_shadow": {
+      "mean_absolute_error": 0.00016300383140332997,
+      "maximum_absolute_error": 0.02329009771347046,
+      "fraction_pixels_changed_gt_1_255": 0.0113
+    }
+  },
+  "outputs": {
+    "full": "artifacts/decouplegs-effects-demo/effects_full.png",
+    "zoom": "artifacts/decouplegs-effects-demo/effects_zoom.png",
+    "difference": "artifacts/decouplegs-effects-demo/effects_difference.png"
+  }
+}
