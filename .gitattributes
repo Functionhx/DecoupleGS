@@ -1,3 +1,6 @@
 # The implementation overlay is first-party source, not vendored code.
 overlay/** linguist-detectable=true
 overlay/** linguist-vendored=false
+
+# Frozen stress-test episodes are emitted by the benchmark scenario generator.
+overlay/configs/benchmark/nuscenes/stress_*/** linguist-generated=true
